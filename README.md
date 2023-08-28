@@ -7,5 +7,5 @@ This repository contains a simple Python script that can be used to receive emai
 You can use this with Docker:
 
 ```bash
-docker run -e PORT 8080 -p 8080:8080 -e SMTP_HOST my-smtp.server  saulshanabrook/sengrid-inbound-relay
+docker run -e PORT 8080 -p 8080:8080 -e SMTP_HOST my-smtp.server ghcr.io/saulshanabrook/sendgrid-inbound-relay:main
 ```
