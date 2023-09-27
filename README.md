@@ -2,6 +2,9 @@
 
 This repository contains a simple Python script that can be used to receive emails from Sendgrid's Inbound Parse Webhook and relay them to an SMTP server.
 
+## Setup with Sengrid
+
+Go to the ["Inbound Parse" settings in Sengrid](https://app.sendgrid.com/settings/parse) and add the location of this service for your domain.
 
 ## Usage
 You can use this with Docker:
