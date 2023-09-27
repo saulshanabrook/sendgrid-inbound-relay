@@ -1,5 +1,11 @@
 FROM python:3.10.13
 
+RUN DEBIAN_FRONTEND=noninteractive apt update \
+	&& DEBIAN_FRONTEND=noninteractive apt install -y --no-install-recommends ruby \
+	&& DEBIAN_FRONTEND=noninteractive apt -y --purge autoremove \
+	&& DEBIAN_FRONTEND=noninteractive apt clean
+RUN gem install pups
+
 RUN pip install  gunicorn
 
 WORKDIR /code
