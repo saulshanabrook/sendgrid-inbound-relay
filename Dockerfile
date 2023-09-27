@@ -15,5 +15,7 @@ RUN pip install -r requirements.txt --no-cache-dir
 
 COPY email_relay.py ./
 ENV PORT 8080
+COPY boot /sbin/boot
+RUN chmod +x /sbin/boot
 
-CMD ["gunicorn", "-b", "0.0.0.0:${PORT}", "--access-logfile=-", "--error-logfile=-", "email_relay:app"]
+CMD ["/sbin/boot"]
